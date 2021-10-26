@@ -1,0 +1,103 @@
+{
+  "autos": [
+    {
+      "id": "nissan-kicks",
+      "anio": 2021,
+      "modelo": "Nissan Kicks",
+      "marca": "nissan",
+      "precio": 368900,
+      "inventario": "INSTOCK",
+      "mensualidad": 5200
+    },
+    {
+      "id": "nissan-march",
+      "anio": 2021,
+      "modelo": "nissan march",
+      "marca": "nissan",
+      "precio": 227900,
+      "inventario": "INSTOCK",
+      "mensualidad": 2600
+    },
+    {
+      "id": "nissan-x-trail",
+      "anio": 2021,
+      "modelo": "nissan x-trail",
+      "marca": "nissan",
+      "precio": 526900,
+      "inventario": "INSTOCK",
+      "mensualidad": 9048
+    },
+    {
+      "id": "nissan-pathfinder",
+      "anio": 2021,
+      "modelo": "nissan pathfinder",
+      "marca": "nissan",
+      "precio": 780900,
+      "inventario": "INSTOCK",
+      "mensualidad": 9681
+    },
+    {
+      "id": "nissan-leaf",
+      "anio": 2021,
+      "modelo": "nissan leaf",
+      "marca": "nissan",
+      "precio": 922900,
+      "inventario": "OUTOFSTOCK",
+      "mensualidad": 12157
+    },
+    {
+      "id": "nissan-versa",
+      "anio": 2021,
+      "modelo": "nissan versa",
+      "marca": "nissan",
+      "precio": 276900,
+      "inventario": "INSTOCK",
+      "mensualidad": 3999
+    },
+    {
+      "id": "nissan-sentra",
+      "anio": 2021,
+      "modelo": "nissan sentra",
+      "marca": "nissan",
+      "precio": 356900,
+      "inventario": "INSTOCK",
+      "mensualidad": 5199
+    },
+    {
+      "id": "vw-t-cross",
+      "anio": 2021,
+      "modelo": "Volkswagen T-cross",
+      "marca": "Volkswagen",
+      "precio": 381490,
+      "inventario": "OUTOFSTOCK",
+      "mensualidad": 6399
+    },
+    {
+      "id": "vw-taos",
+      "anio": 2021,
+      "modelo": "Volkswagen Taos",
+      "marca": "Volkswagen",
+      "precio": 458490,
+      "inventario": "INSTOCK",
+      "mensualidad": 8999
+    },
+    {
+      "id": "vw-teramont",
+      "anio": 2021,
+      "modelo": "Volkswagen teramont",
+      "marca": "Volkswagen",
+      "precio": 816090,
+      "inventario": "OUTOFSTOCK",
+      "mensualidad": 11249
+    },
+    {
+      "id": "vw-cross-sport",
+      "anio": 2021,
+      "modelo": "Volkswagen Cross-sport",
+      "marca": "Volkswagen",
+      "precio": 1027590,
+      "inventario": "INSTOCK",
+      "mensualidad": 15499
+    }
+  ]
+}

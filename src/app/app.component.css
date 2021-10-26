@@ -1,0 +1,7 @@
+body {
+    padding: 2em;
+}
+
+.allButFooter {
+    min-height: calc(100vh - 50px);
+}

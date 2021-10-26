@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@300&display=swap');
+
+.car-details{
+    position:relative;
+}
+.image{
+    width: 100%;
+}
+.text{
+    position: absolute;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    top: 50px;
+    left: 50px;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 2px;
+}
+
+.text-card{
+    width: 100%;
+}
+
+.buttons{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+@media (max-width: 1200px){
+    .car-details{
+        font-size: .5em;
+    }
+}
+
+.form-text{
+    text-align: left;
+    padding-left: 20px;
+}
+
+@media (max-width:1199px){
+    .text{
+        position: relative;
+        width: 100%;
+        font-size: 1.15em;
+        font-weight: 500;
+        top: 0;
+        left:15px;
+    }
+    .text-card{
+        margin-top: -5px;
+        background-color: #000;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 5px;
+    }
+}
+
+.actionButton{
+    float: right;
+}
+
+.invalid-text{
+    color: red;
+    font-size: 12px;
+}

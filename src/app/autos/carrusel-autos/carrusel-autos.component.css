@@ -1,0 +1,13 @@
+.product-image{
+    width: 50%;
+}
+
+/*TODO: Agregar un sombreado a los bordes*/
+
+.product-item-content{
+    border: 1px solid var(--surface-d);
+    border-radius: 3px;
+    margin: 5px;
+    text-align: center;
+    padding: 5px 0;
+}

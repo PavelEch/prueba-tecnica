@@ -1,0 +1,114 @@
+<div class="car-details">
+
+    <img [src]="auto | img_principal" [alt]="auto.id" class="image" />
+
+    <div class="text-card">
+        <div class="text">
+
+            <h3>Totalmente nuevo {{auto.modelo | titlecase}}</h3>
+            <h1>ESTRENA PRONTO</h1>
+            <h4>Desde:</h4>
+            <h2>{{auto.precio | currency}}</h2>
+            <h4>Mensualidad</h4>
+            <h2>{{auto.mensualidad | currency}}</h2>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <p-fieldset legend="Modificar Auto" [toggleable]="true" [collapsed]="true">
+
+            <p-toast></p-toast>
+
+            <div class="p-fluid p-grid">
+                <div class="p-field p-col-12 p-md-4">
+                    <span class="p-float-label">
+                        <input type="text" id="inputtext" pInputText [value]="auto.modelo | titlecase"
+                            [(ngModel)]="auto.modelo" [ngClass]="{'ng-invalid':modeloValido== false, 'ng-dirty':modeloValido == false, 
+                            '':modeloValido == true}">
+                        <label for="inputtext">Modelo</label>
+                    </span>
+                </div>
+                <span *ngIf="modeloValido == false" class="invalid-text">Ingresa el modelo del Auto para
+                    continuar</span>
+                <br>
+
+                <div class="form-text">
+                    <h4>Marca del Auto: {{auto.marca | titlecase}}</h4>
+                </div>
+
+                <div class="p-field p-col-12 p-md-4">
+                    <p-dropdown placeholder="Marca del Auto" [options]="_marca" [(ngModel)]="marcaSeleccionada"
+                        optionLabel="marca" optionValue="code" [ngClass]="{'ng-invalid':marcaValida== false, 'ng-dirty':marcaValida == false, 
+                        '':marcaValida == true}"></p-dropdown>
+                    <span *ngIf="marcaValida == false" class="invalid-text">Selecciona una Marca de Auto</span>
+                </div>
+                <br>
+
+                <div class="p-field p-col-12 p-md-4">
+                    <span class="p-float-label">
+                        <input type="text" id="inputtext" pInputText [value]="auto.anio" [(ngModel)]="auto.anio"
+                            [ngClass]="{'ng-invalid':anioValido== false, 'ng-dirty':anioValido == false, 
+                        '':anioValido == true}">
+                        <label for="inputtext">Año</label>
+                    </span>
+                </div>
+                <span *ngIf="anioValido == false" class="invalid-text">Ingresa un año para el modelo del Auto superior a
+                    1999 y menor a 2023</span>
+                <br>
+
+                <div class="p-col-12 p-md-4">
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon">$</span>
+                        <input type="text" pInputText placeholder="Precio" [value]="auto.precio"
+                            [(ngModel)]="auto.precio" [ngClass]="{'ng-invalid':precioValido== false, 'ng-dirty':precioValido == false, 
+                            '':precioValido == true}">
+                        <span class="p-inputgroup-addon">.00</span>
+                    </div>
+                </div>
+                <span *ngIf="precioValido == false" class="invalid-text">Ingresa un precio superior a $149,999 mxn
+                    usando sólo números</span>
+                <br>
+
+                <div class="p-col-12 p-md-4">
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon">$</span>
+                        <input type="text" pInputText placeholder="Mensualidad" [value]="auto.mensualidad"
+                            [(ngModel)]="auto.mensualidad" [ngClass]="{'ng-invalid':mensualidadValida== false, 'ng-dirty':mensualidadValida == false, 
+                            '':mensualidadValida == true}">
+                        <span class="p-inputgroup-addon">.00</span>
+                    </div>
+                </div>
+                <span *ngIf="mensualidadValida == false" class="invalid-text">Ingresa una mensualidad superior a $1,999
+                    mxn usando sólo números</span>
+                <br>
+
+                <div class="form-text">
+                    <h4>Inventario: {{auto.inventario | disponibilidad}}</h4>
+                </div>
+
+                <div class="p-field p-col-12 p-md-4">
+                    <p-dropdown placeholder="Disponibilidad del Auto" [options]="disponibilidad"
+                        [(ngModel)]="autoDisponible" optionLabel="disponibilidad" optionValue="code" [ngClass]="{'ng-invalid':disponibilidadValida== false, 'ng-dirty':disponibilidadValida == false, 
+                        '':disponibilidadValida == true}"></p-dropdown>
+                    <span *ngIf="disponibilidadValida == false" class="invalid-text">Selecciona una opción de
+                        Disponibilidad</span>
+                </div>
+                <br>
+            </div>
+
+            <div class="actionButton">
+                <button pButton type="button" class="p-button-raised p-button-rounded p-button-success"
+                    label="Guardar Cambios" (click)="actualizarAuto()"></button>
+            </div>
+
+        </p-fieldset>
+
+        <br><br>
+
+        <button pButton type="button" class="p-button-raised p-button-rounded p-button-danger" label="Eliminar Auto"
+            (click)="eliminarAuto()"></button>
+
+
+
+    </div>
+</div>
